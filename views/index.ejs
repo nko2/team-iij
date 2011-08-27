@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+    <link rel="stylesheet" href="/stylesheets/node_neko.css" type="text/css" />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="/javascripts/node_neko.js"></script>
+  </head>
+  <body>
+    <div id="profile_image_url" class="twitter"><%= user.twitter.profile_image_url %></div><div id="screen_name" class="twitter"><%= user.twitter.screen_name %></div> <div id="logout"><a href="/logout">Logout</a></div>
+    <div id="play">
+      <div id="myneko" class="nekoarea"></div>
+    </div>
+  </body>
+</html>

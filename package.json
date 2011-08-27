@@ -1,0 +1,16 @@
+{
+  "name": "NodeNeko",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "connect-redis": "*",
+    "ejs": "*",
+    "everyauth": "*",
+    "express": "*",
+    "jade": "*",
+    "nko": "*",
+    "socket.io": "*"
+  }
+}

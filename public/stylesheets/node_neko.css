@@ -1,0 +1,220 @@
+#play {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    width: 1200px;
+    height: 600px;
+    background-color: cyan;
+}
+.nekoarea {
+    position: absolute;
+    left: 600px;
+    top: 300px;
+}
+
+#twitterlogin {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#user {
+    position: absolute;
+    top: 0px;
+    left: 300px;
+}
+
+.twitter {
+    display: none;
+}
+
+.tweet-text {
+   font-family: Arial, "Helvetica Neue", sans-serif;
+   line-height: 19px;
+   padding: 0;
+   wrod-wrap: break-word;
+}
+
+.tweet-image {
+    float: left;
+    height: 6px;
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+.tweet-image {
+    float: left;
+    height: 48px;
+    margin-top: 3px;
+    overflow: hidden;
+    width: 48px;
+}
+
+.ui-tooltip-rounded,.ui-tooltip-rounded .ui-tooltip-content{
+   -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+   border-radius: 10px;
+}
+
+.ui-tooltip-rounded .ui-tooltip-titlebar{
+    -moz-border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    border-radius: 10px 10px 0 0;
+}
+
+.ui-tooltip-rounded .ui-tooltip-titlebar + .ui-tooltip-content{
+    -moz-border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.ui-tooltip-shadow{
+  -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  filter: Shadow(Color='gray', Direction=135, Strength=3);
+  -ms-filter:"progid:DXImageTransform.Microsoft.shadow(Color='gray', Direction=135, Strength=3)";
+}
+
+/* Following: Thanks for CSS Sprites Generator Tool http://ja.spritegen.website-performance.org/ */
+.tora {
+   background: url(/images/nekotora.png) no-repeat top left;
+}
+
+.tora.awake{ background-position: 0 0; width: 32px; height: 32px; } 
+.tora.down1{ background-position: 0 -82px; width: 32px; height: 32px;} 
+.tora.down2{ background-position: 0 -164px; width: 32px; height: 32px; } 
+.tora.dwleft1{ background-position: 0 -246px; width: 32px; height: 32px; } 
+.tora.dwleft2{ background-position: 0 -328px; width: 32px; height: 32px; } 
+.tora.dwright1{ background-position: 0 -410px; width: 32px; height: 32px; } 
+.tora.dwright2{ background-position: 0 -492px; width: 32px; height: 32px; } 
+.tora.jare2{ background-position: 0 -574px; width: 32px; height: 32px; } 
+.tora.kaki1{ background-position: 0 -656px; width: 32px; height: 32px; } 
+.tora.kaki2{ background-position: 0 -738px; width: 32px; height: 32px; } 
+.tora.left1{ background-position: 0 -820px; width: 32px; height: 32px; } 
+.tora.left2{ background-position: 0 -902px; width: 32px; height: 32px; } 
+.tora.mati2{ background-position: 0 -984px; width: 32px; height: 32px; } 
+.tora.mati1{ background-position: 0 -1066px; width: 32px; height: 32px; } 
+.tora.right1{ background-position: 0 -1148px; width: 32px; height: 32px; } 
+.tora.right2{ background-position: 0 -1230px; width: 32px; height: 32px; } 
+.tora.sleep1{ background-position: 0 -1312px; width: 32px; height: 32px; } 
+.tora.sleep2{ background-position: 0 -1394px; width: 32px; height: 32px; } 
+.tora.up1{ background-position: 0 -1476px; width: 32px; height: 32px; } 
+.tora.up2{ background-position: 0 -1558px; width: 32px; height: 32px; } 
+.tora.upleft1{ background-position: 0 -1640px; width: 32px; height: 32px; } 
+.tora.upleft2{ background-position: 0 -1722px; width: 32px; height: 32px; } 
+.tora.upright1{ background-position: 0 -1804px; width: 32px; height: 32px; } 
+.tora.upright2{ background-position: 0 -1886px; width: 32px; height: 32px; }
+
+.black {
+   background: url(/images/nekoblack.png) no-repeat top left;
+}
+.black.awake{ background-position: 0 0; width: 32px; height: 32px; } 
+.black.down1{ background-position: 0 -82px; width: 32px; height: 32px; } 
+.black.down2{ background-position: 0 -164px; width: 32px; height: 32px; } 
+.black.dwleft1{ background-position: 0 -246px; width: 32px; height: 32px; } 
+.black.dwleft2{ background-position: 0 -328px; width: 32px; height: 32px; } 
+.black.dwright1{ background-position: 0 -410px; width: 32px; height: 32px; } 
+.black.dwright2{ background-position: 0 -492px; width: 32px; height: 32px; } 
+.black.jare2{ background-position: 0 -574px; width: 32px; height: 32px; } 
+.black.kaki1{ background-position: 0 -656px; width: 32px; height: 32px; } 
+.black.kaki2{ background-position: 0 -738px; width: 32px; height: 32px; } 
+.black.left1{ background-position: 0 -820px; width: 32px; height: 32px; } 
+.black.left2{ background-position: 0 -902px; width: 32px; height: 32px; } 
+.black.mati1{ background-position: 0 -984px; width: 32px; height: 32px; } 
+.black.mati2{ background-position: 0 -1066px; width: 32px; height: 32px; } 
+.black.right1{ background-position: 0 -1148px; width: 32px; height: 32px; } 
+.black.right2{ background-position: 0 -1230px; width: 32px; height: 32px; } 
+.black.sleep1{ background-position: 0 -1312px; width: 32px; height: 32px; } 
+.black.sleep2{ background-position: 0 -1394px; width: 32px; height: 32px; } 
+.black.up1{ background-position: 0 -1476px; width: 32px; height: 32px; } 
+.black.up2{ background-position: 0 -1558px; width: 32px; height: 32px; } 
+.black.upleft1{ background-position: 0 -1640px; width: 32px; height: 32px; } 
+.black.upleft2{ background-position: 0 -1722px; width: 32px; height: 32px; } 
+.black.upright1{ background-position: 0 -1804px; width: 32px; height: 32px; } 
+.black.upright2{ background-position: 0 -1886px; width: 32px; height: 32px; } 
+
+.gray {
+   background: url(/images/nekogray.png) no-repeat top left;
+}
+.gray.awake{ background-position: 0 0; width: 32px; height: 32px; } 
+.gray.down1{ background-position: 0 -82px; width: 32px; height: 32px; } 
+.gray.down2{ background-position: 0 -164px; width: 32px; height: 32px; } 
+.gray.dwleft1{ background-position: 0 -246px; width: 32px; height: 32px; } 
+.gray.dwleft2{ background-position: 0 -328px; width: 32px; height: 32px; } 
+.gray.dwright1{ background-position: 0 -410px; width: 32px; height: 32px; } 
+.gray.dwright2{ background-position: 0 -492px; width: 32px; height: 32px; } 
+.gray.jare2{ background-position: 0 -574px; width: 32px; height: 32px; } 
+.gray.kaki1{ background-position: 0 -656px; width: 32px; height: 32px; } 
+.gray.kaki2{ background-position: 0 -738px; width: 32px; height: 32px; } 
+.gray.left1{ background-position: 0 -820px; width: 32px; height: 32px; } 
+.gray.left2{ background-position: 0 -902px; width: 32px; height: 32px; } 
+.gray.mati1{ background-position: 0 -984px; width: 32px; height: 32px; } 
+.gray.mati2{ background-position: 0 -1066px; width: 32px; height: 32px; } 
+.gray.right1{ background-position: 0 -1148px; width: 32px; height: 32px; } 
+.gray.right2{ background-position: 0 -1230px; width: 32px; height: 32px; } 
+.gray.sleep1{ background-position: 0 -1312px; width: 32px; height: 32px; } 
+.gray.sleep2{ background-position: 0 -1394px; width: 32px; height: 32px; } 
+.gray.up1{ background-position: 0 -1476px; width: 32px; height: 32px; } 
+.gray.up2{ background-position: 0 -1558px; width: 32px; height: 32px; } 
+.gray.upleft1{ background-position: 0 -1640px; width: 32px; height: 32px; } 
+.gray.upleft2{ background-position: 0 -1722px; width: 32px; height: 32px; } 
+.gray.upright1{ background-position: 0 -1804px; width: 32px; height: 32px; } 
+.gray.upright2{ background-position: 0 -1886px; width: 32px; height: 32px; } 
+
+.white {
+   background: url(/images/nekowhite.png) no-repeat top left;
+}
+.white.awake{ background-position: 0 0; width: 32px; height: 32px; } 
+.white.down1{ background-position: 0 -82px; width: 32px; height: 32px; } 
+.white.down2{ background-position: 0 -164px; width: 32px; height: 32px; } 
+.white.dwleft1{ background-position: 0 -246px; width: 32px; height: 32px; } 
+.white.dwleft2{ background-position: 0 -328px; width: 32px; height: 32px; } 
+.white.dwright1{ background-position: 0 -410px; width: 32px; height: 32px; } 
+.white.dwright2{ background-position: 0 -492px; width: 32px; height: 32px; } 
+.white.jare2{ background-position: 0 -574px; width: 32px; height: 32px; } 
+.white.kaki1{ background-position: 0 -656px; width: 32px; height: 32px; } 
+.white.kaki2{ background-position: 0 -738px; width: 32px; height: 32px; } 
+.white.left1{ background-position: 0 -820px; width: 32px; height: 32px; } 
+.white.left2{ background-position: 0 -902px; width: 32px; height: 32px; } 
+.white.mati1{ background-position: 0 -984px; width: 32px; height: 32px; } 
+.white.mati2{ background-position: 0 -1066px; width: 32px; height: 32px; } 
+.white.right1{ background-position: 0 -1148px; width: 32px; height: 32px; } 
+.white.right2{ background-position: 0 -1230px; width: 32px; height: 32px; } 
+.white.sleep1{ background-position: 0 -1312px; width: 32px; height: 32px; } 
+.white.sleep2{ background-position: 0 -1394px; width: 32px; height: 32px; } 
+.white.up1{ background-position: 0 -1476px; width: 32px; height: 32px; } 
+.white.up2{ background-position: 0 -1558px; width: 32px; height: 32px; } 
+.white.upleft1{ background-position: 0 -1640px; width: 32px; height: 32px; } 
+.white.upleft2{ background-position: 0 -1722px; width: 32px; height: 32px; } 
+.white.upright1{ background-position: 0 -1804px; width: 32px; height: 32px; } 
+.white.upright2{ background-position: 0 -1886px; width: 32px; height: 32px; } 
+
+.yellow {
+   background: url(/images/nekoyellow.png) no-repeat top left;
+}
+.yellow.awake{ background-position: 0 0; width: 32px; height: 32px; } 
+.yellow.down1{ background-position: 0 -82px; width: 32px; height: 32px; } 
+.yellow.down2{ background-position: 0 -164px; width: 32px; height: 32px; } 
+.yellow.dwleft1{ background-position: 0 -246px; width: 32px; height: 32px; } 
+.yellow.dwleft2{ background-position: 0 -328px; width: 32px; height: 32px; } 
+.yellow.dwright1{ background-position: 0 -410px; width: 32px; height: 32px; } 
+.yellow.dwright2{ background-position: 0 -492px; width: 32px; height: 32px; } 
+.yellow.jare2{ background-position: 0 -574px; width: 32px; height: 32px; } 
+.yellow.kaki1{ background-position: 0 -656px; width: 32px; height: 32px; } 
+.yellow.kaki2{ background-position: 0 -738px; width: 32px; height: 32px; } 
+.yellow.left1{ background-position: 0 -820px; width: 32px; height: 32px; } 
+.yellow.left2{ background-position: 0 -902px; width: 32px; height: 32px; } 
+.yellow.mati1{ background-position: 0 -984px; width: 32px; height: 32px; } 
+.yellow.mati2{ background-position: 0 -1066px; width: 32px; height: 32px; } 
+.yellow.right1{ background-position: 0 -1148px; width: 32px; height: 32px; } 
+.yellow.right2{ background-position: 0 -1230px; width: 32px; height: 32px; } 
+.yellow.sleep1{ background-position: 0 -1312px; width: 32px; height: 32px; } 
+.yellow.sleep2{ background-position: 0 -1394px; width: 32px; height: 32px; } 
+.yellow.up1{ background-position: 0 -1476px; width: 32px; height: 32px; } 
+.yellow.up2{ background-position: 0 -1558px; width: 32px; height: 32px; } 
+.yellow.upleft1{ background-position: 0 -1640px; width: 32px; height: 32px; } 
+.yellow.upleft2{ background-position: 0 -1722px; width: 32px; height: 32px; } 
+.yellow.upright1{ background-position: 0 -1804px; width: 32px; height: 32px; } 
+.yellow.upright2{ background-position: 0 -1886px; width: 32px; height: 32px; } 
+
