@@ -313,16 +313,12 @@ $(function(){
 
   // main routine
   var screen_name = $("#screen_name").html();
-  var profile_image_url = $("#profile_image_url").html();
   var myMouse = new Mouse();
   if(screen_name){
     var myNeko = new Neko();
     myNeko.color = NekoColorList[parseInt(Math.random()*NekoColorList.length)];
     myNeko.screen_name = screen_name;
-    myNeko.profile_image_url = profile_image_url;
-    console.info(screen_name);
     var counter = 0;
-    var text = '<div class="tweet-image"><img src="'+profile_image_url+'" ></img></div><div class="tweet-text">'+screen_name+'</div>';
     setNekoState(myNeko, "NEKO_STOP");
     myNeko.lastx = parseInt($("#myneko").css("left"));
     myNeko.lasty = parseInt($("#myneko").css("top"));
@@ -341,7 +337,7 @@ $(function(){
   }
   socket.on('connect', function(){
     socket.on('message',function(msg){
-      console.log(JSON.stringify(msg));
+//      console.log(JSON.stringify(msg));
       if("nekoData" in msg ) {
         var nekoObj = msg["nekoData"];
         drawOtherNeko(nekoObj);
