@@ -26,7 +26,7 @@ var fs = require('fs');
 var neko_auto = true;
 var neko_auto_json;
 if(neko_auto){
-  neko_auto_json = JSON.parse(fs.readFileSync((__dirname + '/node_neko.json', 'utf8')));
+  neko_auto_json = JSON.parse(fs.readFileSync(__dirname + '/node_neko.json', "utf8"));
 }
 io.sockets.on('connection', function (socket) {
   if(neko_auto){
