@@ -71,6 +71,19 @@
     left: 1100px;
 }
 
+#tulip1 {
+    position: absolute;
+    top: 525px;
+    left: 100px;
+}
+
+#tulip2 {
+    position: absolute;
+    top: 475px;
+    left: 700px;
+}
+
+
 #logo {
     position: absolute;
     top: 5px;
