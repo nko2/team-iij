@@ -244,8 +244,13 @@ $(function(){
     if(myMouse.x === null || myMouse.y === null) {
       return;
     }
-    dx = myMouse.x - (neko_obj.x + 8 );
-    dy = myMouse.y - (neko_obj.y + 30);
+    if($("div").is("#rat")){
+      dx = parseInt($("#rat").css("left")) - (neko_obj.x + 8 );
+      dy = parseInt($("#rat").css("top")) - (neko_obj.y + 30);
+    } else {
+      dx = myMouse.x - (neko_obj.x + 8 );
+      dy = myMouse.y - (neko_obj.y + 30);
+    }
     length = Math.sqrt(dx*dx+dy*dy);
     if( (dx || dy) && (  length > nekoSpeed)) {
       dx = (nekoSpeed/length)*dx;
@@ -279,6 +284,20 @@ $(function(){
     other.html('<div class="'+neko_obj.color+' '+animation_img+'" id="'+neko_obj.screen_name+'"></div><div class="other_screen_name">'+neko_obj.screen_name+'</div>');
     other.css("left",neko_obj.x+"px");
     other.css("top", neko_obj.y+"px");
+  }
+
+  function drawRat(rat_obj){
+    var rat = '<div id="rat"><img id="ratimg" src="/images/hamu_eat.gif" /></div>';
+    $("#play").append(rat);
+    $("#rat").css("left",rat_obj[0]+"px");
+    $("#rat").css("top",rat_obj[1]+"px");
+    $("#rat").animate({height: "toggle", opacity: "toggle"}, "slow" ,function(){
+      setTimeout(function(){
+        $("#rat").animate({height: "toggle", opacity: "toggle"}, "slow" ,function(){
+              $("#rat").remove();
+        });
+      },700);
+    });
   }
   
   function tickCount(neko_obj) {
@@ -381,6 +400,9 @@ $(function(){
       if(msg && "nekoData" in msg ) {
         var nekoObj = msg["nekoData"];
         drawOtherNeko(nekoObj);
+      } else if(msg && "Rat" in msg ) {
+        var ratObj = msg["Rat"];
+        drawRat(ratObj);
       }
     });
   });

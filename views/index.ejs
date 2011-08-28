@@ -12,16 +12,18 @@
     <script type="text/javascript" src="/javascripts/node_neko.js"></script>
   </head>
   <body>
-    <div id="logo"><img id="logimg" src="/images/logo1.png" /></div>
-    <div id="screen_name" class="twitter"><% if(screen_name) { %><%= screen_name %><% } else { %>null<% } %></div>
-    <div id="loginout">
-      <% if(screen_name) { %>
-         <a id="logout_link" href="/byebye">Logout</a>
-      <% } else { %>
-        <a href="/auth/twitter"><img src='https://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-l.png' /></a>
-      <% } %>
-    </div>
-    <div id="credits"><a id="credits_link" href="/credits.html">Credits</a></div>
+    <header>
+      <div id="logo"><img id="logimg" src="/images/logo1.png" /></div>
+      <div id="screen_name" class="twitter"><% if(screen_name) { %><%= screen_name %><% } else { %>null<% } %></div>
+      <div id="loginout">
+        <% if(screen_name) { %>
+        <a id="logout_link" href="/byebye">Logout</a>
+        <% } else { %>
+        <a href="/auth/twitter"><img src='https://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-l.png' /></a><div id="loginmsg"> Play with your "Neko"</div>
+        <% } %>
+      </div>
+      <div id="credits"><a id="credits_link" href="/credits.html">Credits</a></div>
+    </header>
     <div id="play">
       <div id="myneko" class="nekoarea"></div>
       <div id="kirikabu1" class="komono"><img id="kirikabu1img" src="/images/kirikabu.gif" /></div>

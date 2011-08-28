@@ -20,6 +20,9 @@ io.set('transports', [
     , 'jsonp-polling'
 ]);
 
+function getCurrentTime() {
+  return new Date();
+}
 
 var fs = require('fs');
 //var fd = fs.openSync('./node_neko.json','w');
@@ -29,6 +32,11 @@ if(neko_auto){
   neko_auto_json = JSON.parse(fs.readFileSync(__dirname + '/node_neko.json', "utf8"));
 }
 var neko_auto_playing = false;
+
+var rat_auto = true;
+
+var emit_time;
+var now;
 io.sockets.on('connection', function (socket) {
   if(neko_auto && !neko_auto_playing){
     neko_auto_playing = true;
@@ -41,6 +49,29 @@ io.sockets.on('connection', function (socket) {
       }
     },1000/10);
   }
+  var rat_mintime = 5;
+  var rat_maxtime = 30;
+  if(rat_auto) {
+    var time_interval = (Math.random()*(rat_maxtime-rat_mintime)+rat_mintime)*1000;
+    setInterval(function(){
+      now = getCurrentTime();
+      if(!emit_time){
+        emit_time = now;
+      }
+      if((now - emit_time) > time_interval){
+        var offset = 100;
+        var rat_x = parseInt(Math.random()*(1200-offset*2))+offset;
+        var rat_y = parseInt(Math.random()*(600-offset*2))+offset;
+        var rat_json = {"Rat": [rat_x,rat_y]};
+        socket.json.broadcast.send(rat_json);
+        emit_time = now;
+        time_interval = (Math.random()*(rat_maxtime-rat_mintime)+rat_mintime)*1000;
+      }
+    }, 1000);
+  }
+
+  
+  
   socket.on('connect', function(){
     console.log("user connected");
   });

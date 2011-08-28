@@ -83,6 +83,14 @@
     left: 700px;
 }
 
+header {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 10px;
+    width: 1200px;
+    height: 40px;
+}
 
 #logo {
     position: absolute;
@@ -93,7 +101,7 @@
 #play {
     position: absolute;
     top: 40px;
-    left: 15px;
+    left: 10px;
     width: 1200px;
     height: 600px;
     background: url(/images/grass4.png) repeat top left;
@@ -114,24 +122,29 @@
 
 #loginout {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    bottom: 5px;
+    left: 0;
+}
+#loginout img {
+    position: absolute;
+    bottom: 0;
 }
 
 #credits {
     position: absolute;
-    top: 10px;
-    left: 1150px;
+    bottom: 5px;
+    right: 0;
 }
 
 #logout_link,
 #credits_link {
+    display: block;
     background: #a11519;
     color: #ffffff;
     text-decoration: none;
-    height: 24px;
+    font-size: 95%;
+    padding: 0 3px;
     line-height: 24px;
-    padding: 3px;
     opacity: 0.5;
     -webkit-border-radius: 3px;
        -moz-border-radius: 3px;
@@ -145,6 +158,15 @@
 #logout_link:hover,
 #credits_link:hover {
     opacity: 1.0;
+}
+
+#loginmsg {
+    position: absolute;
+    white-space: nowrap;
+    font-family: 'Nunito', sans-serif;
+    color: #666;
+    left: 160px;
+    bottom: 0;
 }
 
 #user {
@@ -162,6 +184,16 @@
 .other_screen_name {
     font-size: 10pt;
     font-family: 'Nunito', sans-serif;
+}
+
+#rat {
+    position: absolute;
+    display: none;
+}
+
+#ratimg {
+    width: 32px;
+    height: 32px;
 }
 
 /* Following: Thanks for CSS Sprites Generator Tool http://ja.spritegen.website-performance.org/ */
