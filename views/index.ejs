@@ -9,7 +9,14 @@
     <script type="text/javascript" src="/javascripts/node_neko.js"></script>
   </head>
   <body>
-    <div id="profile_image_url" class="twitter"><%= user.twitter.profile_image_url %></div><div id="screen_name" class="twitter"><%= user.twitter.screen_name %></div> <div id="logout"><a href="/logout">Logout</a></div>
+    <div id="screen_name" class="twitter"><% if(screen_name) { %><%= screen_name %><% } else { %>null<% } %></div>
+    <div id="loginout">
+      <% if(screen_name) { %>
+         <a href="/byebye">Logout</a> 
+      <% } else { %>
+        <a href="/auth/twitter"><img src='https://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-l.png' /></a>
+      <% } %>
+    </div>
     <div id="play">
       <div id="myneko" class="nekoarea"></div>
     </div>

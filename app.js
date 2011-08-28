@@ -8,18 +8,18 @@ var app = module.exports = express.createServer()
     ,RedisStore = require('connect-redis')(express)
     , nko = require('nko')('YIjnA93TUs1ZJBym');
 
-io.configure('production', function(){
-  io.enable('browser client minification');  
-  io.enable('browser client etag');          
-  io.set('log level', 2);
-  io.set('transports', [                     
+
+io.enable('browser client minification');  
+io.enable('browser client etag');          
+io.set('log level', 1); 
+io.set('transports', [                     
       'websocket'
     , 'flashsocket'
     , 'htmlfile'
     , 'xhr-polling'
     , 'jsonp-polling'
-  ]);
-});
+]);
+
 
 io.sockets.on('connection', function (socket) {
   socket.on('connect', function(){
@@ -43,10 +43,15 @@ function addUser (source, sourceUser) {
 }
 
 var everyauth = require('everyauth');
-var consumerKey = "lBVc0hFWaAoDCGbXVe3JRg";
-//var consumerKey = 'S6rnCD5fZqx8T9LXPoISbA';
-var consumerSecret = 'UQtjm72v9Kz3mt9AVzjqFr7KIpN2025eC5dkkZ1UUCQ';
-//var consumerSecret = '3SKffY2ZSrfd6o3jQRhGADRYF29MBzkz9i8LJWPo';
+var consumerKey,consumerSecret;
+if( process.env.NODE_ENV === 'production' ){
+  consumerKey = "lBVc0hFWaAoDCGbXVe3JRg";
+  consumerSecret = 'UQtjm72v9Kz3mt9AVzjqFr7KIpN2025eC5dkkZ1UUCQ';
+} else {
+  consumerKey = 'S6rnCD5fZqx8T9LXPoISbA';
+  consumerSecret = '3SKffY2ZSrfd6o3jQRhGADRYF29MBzkz9i8LJWPo';
+}
+
 everyauth.twitter
   .consumerKey(consumerKey)
   .consumerSecret(consumerSecret)
@@ -91,14 +96,23 @@ app.configure('production', function(){
 everyauth.helpExpress(app);
 
 app.get('/', function (req, res) {
-  if(req.session.auth && req.user ){
-    res.render('index.ejs', {locals : {user: req.user}});
+  if(req.session.auth){
+    req.session.authed = true;
+  }
+  if(req.user && req.user.twitter && req.user.twitter.screen_name){
+    req.session.screen_name = req.user.twitter.screen_name;
+  }
+  console.log(req.session);
+  if(req.session.authed && req.session.screen_name){
+    res.render('index.ejs', {locals : {screen_name: req.session.screen_name}});
   } else {
-    res.render('login.ejs');
+    res.render('index.ejs', {locals : {screen_name: null}});
   }
 });
 
-app.get('/logout', function(req, res, next){
+app.get('/byebye', function(req, res, next){
+  delete(req.session.authed);
+  delete(req.session.screen_name);
   req.session.destroy(function() {
     res.redirect('/');
   });

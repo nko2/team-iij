@@ -12,7 +12,11 @@
     top: 300px;
 }
 
-#twitterlogin {
+#screen_name {
+    display: none;
+}
+
+#loginout {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -24,57 +28,7 @@
     left: 300px;
 }
 
-.twitter {
-    display: none;
-}
 
-.tweet-text {
-   font-family: Arial, "Helvetica Neue", sans-serif;
-   line-height: 19px;
-   padding: 0;
-   wrod-wrap: break-word;
-}
-
-.tweet-image {
-    float: left;
-    height: 6px;
-    margin-top: 0px;
-    overflow: hidden;
-}
-
-.tweet-image {
-    float: left;
-    height: 48px;
-    margin-top: 3px;
-    overflow: hidden;
-    width: 48px;
-}
-
-.ui-tooltip-rounded,.ui-tooltip-rounded .ui-tooltip-content{
-   -moz-border-radius: 10px;
-   -webkit-border-radius: 10px;
-   border-radius: 10px;
-}
-
-.ui-tooltip-rounded .ui-tooltip-titlebar{
-    -moz-border-radius: 10px 10px 0 0;
-    -webkit-border-radius: 10px 10px 0 0;
-    border-radius: 10px 10px 0 0;
-}
-
-.ui-tooltip-rounded .ui-tooltip-titlebar + .ui-tooltip-content{
-    -moz-border-radius: 0 0 10px 10px;
-    -webkit-border-radius: 0 0 10px 10px;
-    border-radius: 0 0 10px 10px;
-}
-
-.ui-tooltip-shadow{
-  -webkit-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.15);
-  filter: Shadow(Color='gray', Direction=135, Strength=3);
-  -ms-filter:"progid:DXImageTransform.Microsoft.shadow(Color='gray', Direction=135, Strength=3)";
-}
 
 /* Following: Thanks for CSS Sprites Generator Tool http://ja.spritegen.website-performance.org/ */
 .tora {

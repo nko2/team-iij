@@ -92,7 +92,7 @@ $(function(){
     "NEKO_SLEEP": ["NO_STATE", 100, "NEKO_AWAKE", "NO_FUNC", 4, [5, 6]]
   };
 
-  
+
   $("#play").mouseover(function(e){
     if(e.pageX) {
       myMouse.prevX = myMouse.x;
@@ -118,8 +118,10 @@ $(function(){
     myMouse.prevY = myMouse.y;
     myMouse.x = null;
     myMouse.y = null;
-    myNeko.moveDx = 0;
-    myNeko.moveDy = 0;
+    if(myNeko){
+      myNeko.moveDx = 0;
+      myNeko.moveDy = 0;
+    }
   });
 
   function isWindowOver(mouse_obj) {
@@ -312,9 +314,10 @@ $(function(){
   }
 
   // main routine
-  var screen_name = $("#screen_name").html();
+  var screen_name = $("#screen_name").text();
+  console.log(screen_name);
   var myMouse = new Mouse();
-  if(screen_name){
+  if(screen_name !== 'null'){
     var myNeko = new Neko();
     myNeko.color = NekoColorList[parseInt(Math.random()*NekoColorList.length)];
     myNeko.screen_name = screen_name;
