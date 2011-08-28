@@ -110,7 +110,16 @@
     left: 300px;
 }
 
+.screen_name {
+    color: blue;
+    font-size: 10pt;
+    font-family: 'Nunito', sans-serif;
+}
 
+.other_screen_name {
+    font-size: 10pt;
+    font-family: 'Nunito', sans-serif;
+}
 
 /* Following: Thanks for CSS Sprites Generator Tool http://ja.spritegen.website-performance.org/ */
 .tora {

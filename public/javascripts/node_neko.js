@@ -229,7 +229,7 @@ $(function(){
   function drawNeko(neko_obj) {
     var animation_img = getAnimation(neko_obj);
     $("#myneko").empty();
-    $("#myneko").html('<div class="'+neko_obj.color+' '+animation_img+'" id="'+screen_name+'"></div><div>'+screen_name+'</div>');
+    $("#myneko").html('<div class="'+neko_obj.color+' '+animation_img+'" id="'+screen_name+'"></div><div class="screen_name">'+screen_name+'</div>');
     $("#myneko").css("left",neko_obj.x+"px");
     $("#myneko").css("top", neko_obj.y+"px");
     
@@ -245,7 +245,7 @@ $(function(){
     }
     var other = $("#"+other_screen_name);
     other.empty();
-    other.html('<div class="'+neko_obj.color+' '+animation_img+'" id="'+neko_obj.screen_name+'"></div><div>'+neko_obj.screen_name+'</div>');
+    other.html('<div class="'+neko_obj.color+' '+animation_img+'" id="'+neko_obj.screen_name+'"></div><div class="other_screen_name">'+neko_obj.screen_name+'</div>');
     other.css("left",neko_obj.x+"px");
     other.css("top", neko_obj.y+"px");
   }
