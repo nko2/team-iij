@@ -169,6 +169,15 @@ header {
     bottom: 0;
 }
 
+#notice {
+    position: absolute;
+    white-space: nowrap;
+    font-family: 'Nunito', sans-serif;
+    color: #666;
+    left: 840px;
+    bottom: 0;
+}
+
 #user {
     position: absolute;
     top: 0px;
