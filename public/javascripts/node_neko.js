@@ -213,8 +213,8 @@ $(function(){
     if(myMouse.x === null || myMouse.y === null) {
       return;
     }
-    dx = myMouse.x - neko_obj.x;
-    dy = myMouse.y - neko_obj.y;
+    dx = myMouse.x - (neko_obj.x + 8 );
+    dy = myMouse.y - (neko_obj.y + 30);
     length = Math.sqrt(dx*dx+dy*dy);
     if( (dx || dy) && (  length > nekoSpeed)) {
       dx = (nekoSpeed/length)*dx;
@@ -315,7 +315,6 @@ $(function(){
 
   // main routine
   var screen_name = $("#screen_name").text();
-  console.log(screen_name);
   var myMouse = new Mouse();
   if(screen_name !== 'null'){
     var myNeko = new Neko();

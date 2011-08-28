@@ -10,6 +10,8 @@
     position: absolute;
     left: 600px;
     top: 300px;
+    width: 16px;
+    height: 16px;
 }
 
 #screen_name {

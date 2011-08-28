@@ -21,13 +21,31 @@ io.set('transports', [
 ]);
 
 
+var fs = require('fs');
+//var fd = fs.openSync('./node_neko.json','w');
+var neko_auto = true;
+var neko_auto_json;
+if(neko_auto){
+  neko_auto_json = JSON.parse(fs.readFileSync("./node_neko.json","utf8"));
+}
 io.sockets.on('connection', function (socket) {
+  if(neko_auto){
+    var i = 0;
+    var tmout = setInterval(function(){
+      socket.json.broadcast.send(neko_auto_json[i]);
+      i++;
+      if(i > neko_auto_json.length){
+        i = 0;
+      }
+    },1000/10);
+  }
   socket.on('connect', function(){
     console.log("user connected");
   });
   socket.on('message', function (msg) {
     if("nekoData" in msg) {
       socket.json.broadcast.send(msg);
+//      fs.writeSync(fd, JSON.stringify(msg), encoding='utf8')
     }
   });
   socket.on('disconnect', function () {
@@ -102,7 +120,7 @@ app.get('/', function (req, res) {
   if(req.user && req.user.twitter && req.user.twitter.screen_name){
     req.session.screen_name = req.user.twitter.screen_name;
   }
-  console.log(req.session);
+//  console.log(req.session);
   if(req.session.authed && req.session.screen_name){
     res.render('index.ejs', {locals : {screen_name: req.session.screen_name}});
   } else {
