@@ -322,6 +322,12 @@ $(function(){
     myNeko.screen_name = screen_name;
     var counter = 0;
     setNekoState(myNeko, "NEKO_STOP");
+    var playwidth = parseInt($("#play").css("width"));
+    var playheight = parseInt($("#play").css("height"));
+    var initx = parseInt(Math.random()*playwidth);
+    var inity = parseInt(Math.random()*playheight);
+    $("#myneko").css("left", initx+"px");
+    $("#myneko").css("top", inity+"py");
     myNeko.lastx = parseInt($("#myneko").css("left"));
     myNeko.lasty = parseInt($("#myneko").css("top"));
     myNeko.x = parseInt($("#myneko").css("left"));

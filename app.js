@@ -28,8 +28,10 @@ var neko_auto_json;
 if(neko_auto){
   neko_auto_json = JSON.parse(fs.readFileSync(__dirname + '/node_neko.json', "utf8"));
 }
+var neko_auto_playing = false;
 io.sockets.on('connection', function (socket) {
-  if(neko_auto){
+  if(neko_auto && !neko_auto_playing){
+    neko_auto_playing = true;
     var i = 0;
     var tmout = setInterval(function(){
       socket.json.broadcast.send(neko_auto_json[i]);
