@@ -97,6 +97,7 @@
     width: 1200px;
     height: 600px;
     background: url(/images/grass4.png) repeat top left;
+    z-index: 10;
 }
 .nekoarea {
     position: absolute;
