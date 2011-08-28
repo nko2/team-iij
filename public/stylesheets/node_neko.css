@@ -80,7 +80,7 @@
 #play {
     position: absolute;
     top: 40px;
-    left: 0px;
+    left: 15px;
     width: 1200px;
     height: 600px;
     background: url(/images/grass4.png) repeat top left;
@@ -102,6 +102,12 @@
     position: absolute;
     top: 10px;
     left: 10px;
+}
+
+#credits {
+    position: absolute;
+    top: 10px;
+    left: 1150px;
 }
 
 #user {
