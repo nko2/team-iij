@@ -5,7 +5,9 @@
     <title>Node Neko by Team-IIJ</title>
     <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="/stylesheets/node_neko.css" type="text/css" />
+    <link type="text/css" rel="stylesheet" href="/javascripts/qtip2/jquery.qtip.min.css" />
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+    <script type="text/javascript" src="/javascripts/qtip2/jquery.qtip.min.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="/javascripts/node_neko.js"></script>
   </head>
@@ -14,12 +16,12 @@
     <div id="screen_name" class="twitter"><% if(screen_name) { %><%= screen_name %><% } else { %>null<% } %></div>
     <div id="loginout">
       <% if(screen_name) { %>
-         <a href="/byebye">Logout</a> 
+         <a id="logout_link" href="/byebye">Logout</a>
       <% } else { %>
-        <a href="/auth/twitter"><img src='https://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-l.png' /></a> Please login and play around like a cat.
+        <a href="/auth/twitter"><img src='https://si0.twimg.com/images/dev/buttons/sign-in-with-twitter-l.png' /></a>
       <% } %>
     </div>
-    <div id="credits"><a href="/credits.html">Credits</a></div>
+    <div id="credits"><a id="credits_link" href="/credits.html">Credits</a></div>
     <div id="play">
       <div id="myneko" class="nekoarea"></div>
       <div id="kirikabu1" class="komono"><img id="kirikabu1img" src="/images/kirikabu.gif" /></div>

@@ -92,7 +92,38 @@ $(function(){
     "NEKO_SLEEP": ["NO_STATE", 100, "NEKO_AWAKE", "NO_FUNC", 4, [5, 6]]
   };
 
+  $("#myneko").hover(
+    function(){
+       $("#myneko").qtip({
+            content: {
+                text: "Mew"
+            },
+            show: {
+                ready: true,
+                effect: function(offset) {
+                    $(this).fadeIn(300, function() {
+                        $(this).fadeOut(300);
+                    });}
+            },
+            position: {
+                at: 'top center',
+                my: 'bottom center',
+                target: $("#myneko")
+            },
+            style: {
+                classes: 'ui-tooltip-rounded ui-tooltip-shadow',
+                tip: {
+                    corner: true,
+                    border: 1,
+                    height: 18,
+                    width: 14
+                }
+            }
+        });
+    }
+  );
 
+  
   $("#play").mouseover(function(e){
     if(e.pageX) {
       myMouse.prevX = myMouse.x;
@@ -229,7 +260,7 @@ $(function(){
   function drawNeko(neko_obj) {
     var animation_img = getAnimation(neko_obj);
     $("#myneko").empty();
-    $("#myneko").html('<div class="'+neko_obj.color+' '+animation_img+'" id="'+screen_name+'"></div><div class="screen_name">'+screen_name+'</div>');
+    $("#myneko").html('<div class="'+neko_obj.color+' '+animation_img+' " id="'+screen_name+'"></div><div class="screen_name">'+screen_name+'</div>');
     $("#myneko").css("left",neko_obj.x+"px");
     $("#myneko").css("top", neko_obj.y+"px");
     
@@ -347,7 +378,7 @@ $(function(){
   socket.on('connect', function(){
     socket.on('message',function(msg){
 //      console.log(JSON.stringify(msg));
-      if("nekoData" in msg ) {
+      if(msg && "nekoData" in msg ) {
         var nekoObj = msg["nekoData"];
         drawOtherNeko(nekoObj);
       }

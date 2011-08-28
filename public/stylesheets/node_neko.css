@@ -124,6 +124,29 @@
     left: 1150px;
 }
 
+#logout_link,
+#credits_link {
+    background: #a11519;
+    color: #ffffff;
+    text-decoration: none;
+    height: 24px;
+    line-height: 24px;
+    padding: 3px;
+    opacity: 0.5;
+    -webkit-border-radius: 3px;
+       -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+         -o-border-radius: 3px;
+            border-radius: 3px;
+}
+#credits_link {
+    background: #4747d1;
+}
+#logout_link:hover,
+#credits_link:hover {
+    opacity: 1.0;
+}
+
 #user {
     position: absolute;
     top: 0px;
