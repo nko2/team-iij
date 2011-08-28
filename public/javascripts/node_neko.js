@@ -324,8 +324,9 @@ $(function(){
     setNekoState(myNeko, "NEKO_STOP");
     var playwidth = parseInt($("#play").css("width"));
     var playheight = parseInt($("#play").css("height"));
-    var initx = parseInt(Math.random()*playwidth);
-    var inity = parseInt(Math.random()*playheight);
+    var offset = 100;
+    var initx = parseInt(Math.random()*(playwidth-offset*2))+offset;
+    var inity = parseInt(Math.random()*(playheight-offset*2))+offset;
     $("#myneko").css("left", initx+"px");
     $("#myneko").css("top", inity+"py");
     myNeko.lastx = parseInt($("#myneko").css("left"));
@@ -352,4 +353,6 @@ $(function(){
       }
     });
   });
+
+
 });
