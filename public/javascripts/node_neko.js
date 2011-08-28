@@ -296,7 +296,7 @@ $(function(){
         $("#rat").animate({height: "toggle", opacity: "toggle"}, "slow" ,function(){
               $("#rat").remove();
         });
-      },700);
+      },1200);
     });
   }
   
