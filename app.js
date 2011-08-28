@@ -123,7 +123,7 @@ app.configure(function(){
   app.set('view engine', 'ejs');
   app.set('view options', { layout: false });
   app.use(express.logger());
-  app.use(express.favicon());
+  app.use(express.favicon(__dirname + "/public/images/favicon.png"));
   app.use(express.bodyParser());
   app.use(express.cookieParser());
   app.use(express.session({secret: '20110827teamiij'
