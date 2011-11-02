@@ -8,17 +8,9 @@ var app = module.exports = express.createServer()
     ,RedisStore = require('connect-redis')(express)
     , nko = require('nko')('YIjnA93TUs1ZJBym');
 
-
 io.enable('browser client minification');  
 io.enable('browser client etag');          
 io.set('log level', 1); 
-io.set('transports', [                     
-      'websocket'
-    , 'flashsocket'
-    , 'htmlfile'
-    , 'xhr-polling'
-    , 'jsonp-polling'
-]);
 
 function getCurrentTime() {
   return new Date();
